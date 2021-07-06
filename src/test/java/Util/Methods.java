@@ -4,7 +4,6 @@ import Base.BaseTest;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -64,10 +63,8 @@ public class Methods extends BaseTest {
             e.printStackTrace();
         }
     }
-
     public int randomInt(String key) {
         List <WebElement> element= findElements(key);
-
         Random r = new Random();
         int low = 1;
         int high = element.size()-1;

@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 public class ScenarioTestCase extends BaseTest {
     Steps steps = new Steps();
 
-
     @Test
     public void buyTicket(){
         steps.sendKeysToElementTest("input[id='flight-from']","İstanbul");//Nereden uçmak istiyorsan ilgili bir kelime gir
@@ -38,7 +37,9 @@ public class ScenarioTestCase extends BaseTest {
         steps.sendKeysToElementTest("input[placeholder='HES Kodu']","1111111111");
         steps.sendKeysToElementTest("input[id='txtPhone']","5555555555");
         steps.sendKeysToElementTest("input[id='txtEmail']","xmyle@outlook.com");
+        steps.waitSecond(2);
         steps.clickElement("button[class='btn-lg btn-payment pull-right to-booking']");
+        steps.waitSecond(2);
 
 
     }
